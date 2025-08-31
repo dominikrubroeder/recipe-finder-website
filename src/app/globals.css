@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --font-sans: "Nunito Sans", sans-serif;
+    --font-mono: "Nunito", sans-serif;
+    
+    --background: #F6F5F1;
+    --foreground: hsl(170, 45%, 16%);
+    --foreground-foreground: hsl(0, 0%, 100%);
+    --foreground-hover: hsl(170, 45%, 8%);
+    --foreground-border: hsl(170, 45%, 4%);
+    --foreground-muted: hsla(170, 45%, 16%, 10%);
+    --primary: hsl(21, 99%, 71%);
+    --primary-foreground: hsl(0, 0%, 100%);
+    --primary-hover: hsl(21, 99%, 63%);
+    --primary-border: hsl(21, 99%, 59%);
+    --primary-muted: hsla(21, 99%, 71%, 10%);
+    --border: hsl(150, 11%, 89%);
+
+    --container-lg: 90rem;
+    --container-md: 80rem;
+    --container-sm: 48rem;
+    --rounded-lg: 1rem;
+    --rounded-md: 0.625rem;
+    --rounded-sm: 0.25rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --font-sans: var(--font-sans);
+    --font-mono: var(--font-mono);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-foreground-foreground: var(--foreground-foreground);
+    --color-foreground-hover: var(--foreground-hover);
+    --color-foreground-border: var(--foreground-border);
+    --color-foreground-muted: var(--foreground-muted);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary-hover: var(--primary-hover);
+    --color-primary-border: var(--primary-border);
+    --color-primary-muted: var(--primary-muted);
+    --color-border: var(--border);
+
+    --spacing-container-lg: var(--container-lg);
+    --spacing-container-md: var(--container-md);
+    --spacing-container-sm: var(--container-sm);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    a, button {
+        @apply cursor-pointer;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }
