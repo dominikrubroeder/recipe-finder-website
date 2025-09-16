@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import {Nunito, Nunito_Sans} from "next/font/google";
 import "./globals.css";
-import {Header} from "@/components/organismns/layout";
+import {Footer, Header} from "@/components/organismns/layout";
 
 const nunitoSans = Nunito_Sans({
     variable: "--font-sans",
@@ -30,6 +30,7 @@ export default function RootLayout({
         >
         <Header/>
         <main>{children}</main>
+        <Footer/>
         </body>
         </html>
     );

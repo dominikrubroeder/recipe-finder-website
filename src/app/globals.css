@@ -3,7 +3,7 @@
 :root {
     --font-sans: "Nunito Sans", sans-serif;
     --font-mono: "Nunito", sans-serif;
-    
+
     --background: #F6F5F1;
     --foreground: hsl(170, 45%, 16%);
     --foreground-foreground: hsl(0, 0%, 100%);
@@ -52,8 +52,24 @@
         @apply border-border;
     }
 
+    h1 {
+        @apply text-6xl font-bold mb-4;
+    }
+
+    h2 {
+        @apply text-5xl font-bold mb-3;
+    }
+
+    h3 {
+        @apply text-[2rem] font-bold mb-2;
+    }
+
     a, button {
         @apply cursor-pointer;
+    }
+
+    .container-md {
+        @apply max-w-container-md text-center mx-auto px-4 md:px-0;
     }
 }
 
